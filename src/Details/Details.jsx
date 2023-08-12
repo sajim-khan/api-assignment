@@ -8,13 +8,6 @@ const Details = ({ singleData }) => {
     type,
     language,
     status,
-    premiered,
-    officialSite,
-    schedule,
-    rating,
-    network,
-    summary,
-    _links,
   } = singleData.show || {};
 
   return (

@@ -4,12 +4,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import ViewDetails from "./Details/ViewDetails";
+import Layout from "./Layout/Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Layout></Layout>,
     children: [
+    {
+      path: "/",
+    element: <App />
+    },
       {
         path: "details/:id",
         element: <ViewDetails></ViewDetails>,
