@@ -6,16 +6,17 @@ import "./index.css";
 import ViewDetails from "./Details/ViewDetails";
 import Layout from "./Layout/Layout";
 import Inc from "./inc/Inc";
+import State from "./state/State";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
     children: [
-    {
-      path: "/",
-    element: <App />
-    },
+      {
+        path: "/",
+        element: <App />,
+      },
       {
         path: "details/:id",
         element: <ViewDetails></ViewDetails>,
@@ -26,9 +27,13 @@ const router = createBrowserRouter([
         },
       },
       {
-        path:'/inc',
-        element:<Inc></Inc>
-      }
+        path: "/inc",
+        element: <Inc></Inc>,
+      },
+      {
+        path: "/state",
+        element: <State></State>,
+      },
     ],
   },
 ]);

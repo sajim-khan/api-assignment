@@ -1,43 +1,43 @@
-import React, { useState } from 'react';
-import Children from '../Child/Children/Children';
-import Update from '../update/Update';
+import React, { useState } from "react";
+import Children from "../Child/Children/Children";
+import Update from "../update/Update";
 
 const Inc = () => {
-const [count, setCount] = useState(0)
-const [incValue, setIncValue] = useState(30);
-const [decValue, setDecValue] = useState(10);
+  const [count, setCount] = useState(0);
+  const [upValue, setUpValue] = useState(10)
+  const [downValue, setDownValue] = useState(5)
 
-function incrementCount() {
-    setCount(count + incValue);
-}
-function decrementCount() {
-    setCount(count - decValue);
-}
+  function increment() {
+    setCount(count + upValue);
+  }
+  function decrement() {
+    setCount(count - downValue);
+  }
+  
+  function upValueChanged(e) {
+    setUpValue(parseInt(e.target.value))
+  }
+  function downValueChanged(e) {
+    setDownValue(parseInt(e.target.value));
+  }
+  
+  const a = count ?? 10;
+  console.log('value of a' ,a);
+  
+  count && console.log('this is logical and', count);
 
-function handleIncValue(e) {
-  setIncValue(parseInt(e.target.value));
-}
-
-function handleDecValue(e) {
-  setDecValue(parseInt(e.target.value));
-}
-
-    return (
-      <div className="bg-cyan-500">
-        <h1 className="m-10 font-bold">Counter: {count}</h1>
-        <Update
-          incValue={incValue}
-          decValue={decValue}
-          handleIncValue={handleIncValue}
-          handleDecValue={handleDecValue}
-        />
-        <Children
-          incrementCount={incrementCount}
-          decrementCount={decrementCount}
-        ></Children>
-      </div>
-    );
+  return (
+    <div className="bg-cyan-500">
+      <h1 className="m-10 pt-10 font-bold">Counter: {count}</h1>
+      <Update
+        upValue={upValue}
+        downValue={downValue}
+        upValueChanged={upValueChanged}
+        downValueChanged={downValueChanged}
+      ></Update>
+      <Children increment={increment} decrement={decrement} />
+    </div>
+  );
 };
 
 export default Inc;
-

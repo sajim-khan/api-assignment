@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Children = ({ incrementCount, decrementCount }) => {
+const Children = ({ increment, decrement }) => {
+
   return (
-    <div>
+    <div className="ms-10">
       <button
-        onClick={incrementCount}
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded ms-10 mr-5"
+        onClick={increment}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mr-5"
       >
         Increment
       </button>
       <button
-        onClick={decrementCount}
-        className="bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={decrement}
+        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
       >
         Decrement
       </button>

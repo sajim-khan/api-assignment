@@ -1,12 +1,22 @@
-import React from "react";
+import React from 'react';
 
-const Update = ({ incValue, decValue, handleIncValue, handleDecValue }) => {
+const Update = ({ upValue, downValue, upValueChanged, downValueChanged }) => {
   return (
-    <div className="m-5">
-      <label className="mr-3 ms-5">Increment</label>
-      <input type="number" value={incValue} onChange={handleIncValue} />
-      <label className="mx-3">Decrement</label>
-      <input type="number" value={decValue} onChange={handleDecValue} />
+    <div className="pb-5">
+      <label className="ms-10 ">Increment</label>
+      <input
+        className="ms-5"
+        type="number"
+        value={upValue}
+        onChange={upValueChanged}
+      />
+      <label className="m-10">Decrement</label>
+      <input
+        className="ms-5"
+        type="number"
+        value={downValue}
+        onChange={downValueChanged}
+      />
     </div>
   );
 };
