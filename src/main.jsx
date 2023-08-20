@@ -5,6 +5,7 @@ import App from "./App";
 import "./index.css";
 import ViewDetails from "./Details/ViewDetails";
 import Layout from "./Layout/Layout";
+import Inc from "./inc/Inc";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
           );
         },
       },
+      {
+        path:'/inc',
+        element:<Inc></Inc>
+      }
     ],
   },
 ]);
