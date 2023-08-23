@@ -84,12 +84,12 @@ useEffect(() => {
 // ];
   // const person = [];
     return (
-      <div className="m-10 p-5 bg-blue-600 text-white text-3xl">
+      <div className="m-10 p-5 text-black">
         {/* <h1>Hello { name ? name : 'Guest'}</h1> */}
         {/* {name && <h1>Hello {name} </h1>}
         {!name && <h1>Hello Guest </h1>} */}
         {/* //ternary operator */}
-        {state.name ? <h1>Hello {state.name} </h1> : <h1>Hello Guest </h1>}
+        {state.name ? <h1 className='text-2xl font-bold'>Hello {state.name} </h1> : <h1>Hello Guest </h1>}
         <ClockPage></ClockPage>
       </div>
     );
