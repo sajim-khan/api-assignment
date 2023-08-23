@@ -2,7 +2,6 @@ import React from 'react';
 
 const Single = ({ single }) => {
     const { name, email, age, location } = single;
-    const personNumber = index + 1;
     return (
       <div className="mb-10">
         <h1>{name}</h1>
