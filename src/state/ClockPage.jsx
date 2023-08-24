@@ -9,6 +9,10 @@ function getTimes(date) {
   };
 }
 
+function formatTime(time){
+    return time < 10 ? `0${time}`: time;
+}
+
 const ClockPage = () => {
   const [date, setDate] = useState(new Date());
 
@@ -24,10 +28,11 @@ const ClockPage = () => {
     <div className="mt-10">
       <h1 className="text-3xl font-bold mb-5">Clock Page</h1>
       <h1 className="text-4xl font-bold mb-5">
-        {time.hours} : {time.minutes} : {time.seconds}
+        {formatTime(time.hours)} : {formatTime(time.minutes)} : {formatTime(time.seconds)}
       </h1>
     </div>
   );
 };
 
 export default ClockPage;
+
